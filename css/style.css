@@ -17,7 +17,7 @@ h1{
 }
 
 .navbar{
-	background-color: rgba(0, 0, 0, .8);
+	background-color: rgba(0, 0, 0, .9);
 	font-size: small;
 }
 
@@ -130,10 +130,11 @@ h1{
 .img-mrg{
 	overflow: hidden;
 	display: inline-block;
+	text-align: center;
 }
 
 .img-cliente{
-	width: 80%!important;
+	width: 150px!important;
 	transition: .5s;
 }
 
