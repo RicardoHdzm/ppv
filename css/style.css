@@ -12,6 +12,10 @@ div{
 	padding: 0!important;
 }
 
+h1{
+	font-size: large;
+}
+
 .navbar{
 	background-color: rgba(0, 0, 0, .8);
 	font-size: small;
@@ -115,6 +119,28 @@ div{
 	background-color: #fff;
 	transform: translateY(-5%);
 }
+
+.clientes{
+	height: fit-content;
+	text-align: center;
+	padding-top: 10rem!important;
+	padding-bottom: 10rem!important;
+}
+
+.img-mrg{
+	overflow: hidden;
+	display: inline-block;
+}
+
+.img-cliente{
+	width: 80%!important;
+	transition: .5s;
+}
+
+.img-cliente:hover{
+	filter: brightness(.8);
+}
+
 
 /* width */
 ::-webkit-scrollbar {

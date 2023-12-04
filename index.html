@@ -38,10 +38,10 @@
 			<div class="mr-sm-2">
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav mr-auto mt-2 mt-lg-0 align-items-center">
-						<a class="navbar-brand px-3" href="menu">Nosotros</a>
-						<a class="navbar-brand px-3" href="menu">Clientes</a>
-						<a class="navbar-brand px-3" href="menu">Planes</a>
-						<a class="navbar-brand px-3" href="menu">Contacto</a>
+						<a class="navbar-brand px-3" href="menu">NOSOTROS</a>
+						<a class="navbar-brand px-3" href="#Clientes">CLIENTES</a>
+						<a class="navbar-brand px-3" href="menu">PLANES</a>
+						<a class="navbar-brand px-3" href="menu">CONTACTO</a>
 					</ul>
 				</div>
 			</div>
@@ -56,6 +56,22 @@
 				<img src="img/logos/main-logo.svg" class="main-logo"><br>
 				<button type="button" class="btn">COTIZA TU PROYECTO</button>
 			</div> 
+		</div>
+	</div>
+
+	<div id="Clientes" class="clientes">
+		<div data-aos="slide-up">
+			<h1>NUESTROS CLIENTES</h1>
+			<br>
+			<div class="owl-one owl-carousel owl-theme px-5" data-aos="fade-up">
+				<div class="img-mrg"><img class="img-cliente" src="img/clientes/sponsor.png"></div>
+				<div class="img-mrg"><img class="img-cliente" src="img/clientes/pixkali.png"></div>
+				<div class="img-mrg"><img class="img-cliente" src="img/clientes/patron.png"></div>
+				<div class="img-mrg"><img class="img-cliente" src="img/clientes/munch.png"></div>
+				<div class="img-mrg"><img class="img-cliente" src="img/clientes/limman.png"></div>
+				<div class="img-mrg"><img class="img-cliente" src="img/clientes/jorghealt.png"></div>
+				<div class="img-mrg"><img class="img-cliente" src="img/clientes/pitahaya.png"></div>
+			</div>
 		</div>
 	</div>
 
@@ -114,19 +130,18 @@
 	$('.owl-one').owlCarousel({
 		loop:true,
 		margin:0,
-		nav:false,
+		nav:true,
 		dots:false,
-		autoplay:false,
-		stagePadding: 1,
+		stagePadding: 0,
 		responsive:{
 			0:{
-				items:1
+				items:3
 			},
 			600:{
-				items:1
+				items:3
 			},
 			1000:{
-				items:3
+				items:5
 			}
 		}
 	})
