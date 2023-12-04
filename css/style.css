@@ -46,8 +46,13 @@ div{
 
 .main-logo{
 	width: 50%;
-	color: red;
 }
+
+.footer-logo{
+	width: 125px;
+}
+
+
 
 .btn{
 	background-color: transparent;
