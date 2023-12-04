@@ -75,18 +75,19 @@
 	<div id="Clientes" class="clientes">
 		<h1>NUESTROS CLIENTES</h1>
 		<hr>
-		<br>
-		<div class="owl-one owl-carousel owl-theme px-5 col-lg-12" data-aos="fade-up">
-			<div class="img-mrg"><img class="img-cliente" src="img/clientes/pitahaya.png"></div>
-			<div class="img-mrg"><img class="img-cliente" src="img/clientes/pixkali.png"></div>
-			<div class="img-mrg"><img class="img-cliente" src="img/clientes/patron.png"></div>
-			<div class="img-mrg"><img class="img-cliente" src="img/clientes/munch.png"></div>
+		<div class="owl-one owl-carousel owl-theme p-5 col-lg-12">
+			<div class="img-mrg"><img class="img-cliente" src="img/clientes/limman.png"></div>
+			<div class="img-mrg"><img class="img-cliente" src="img/clientes/mito.png"></div>
 			<div class="img-mrg"><img class="img-cliente" src="img/clientes/limman.png"></div>
 			<div class="img-mrg"><img class="img-cliente" src="img/clientes/jorghealt.png"></div>
-			<div class="img-mrg"><img class="img-cliente" src="img/clientes/pitahaya.png"></div>
-			<div class="img-mrg"><img class="img-cliente" src="img/clientes/patron.png"></div>
-			<div class="img-mrg"><img class="img-cliente" src="img/clientes/munch.png"></div>
 			<div class="img-mrg"><img class="img-cliente" src="img/clientes/limman.png"></div>
+			<div class="img-mrg"><img class="img-cliente" src="img/clientes/jorghealt.png"></div>
+			<div class="img-mrg"><img class="img-cliente" src="img/clientes/limman.png"></div>
+			<div class="img-mrg"><img class="img-cliente" src="img/clientes/mito.png"></div>
+			<div class="img-mrg"><img class="img-cliente" src="img/clientes/limman.png"></div>
+			<div class="img-mrg"><img class="img-cliente" src="img/clientes/jorghealt.png"></div>
+			<div class="img-mrg"><img class="img-cliente" src="img/clientes/limman.png"></div>
+			<div class="img-mrg"><img class="img-cliente" src="img/clientes/jorghealt.png"></div>
 		</div>
 	</div>
 </div>
@@ -96,11 +97,12 @@
 	<hr>
 	<br>
 	<p>Descubre la oferta de soluciones más transparente, sencilla y accesible.</p>
+	<br>
 	<div class="row px-5">
 		<div class="col-lg-4 col-12 mb-3 d-flex align-items-stretch p-4">
 			<div class="card p-5">
 				<div class="card-body">
-					<h1 class="card-title red"><center><i class="fa-solid fa-fire plan-icon"></i></center><br><br>Web Express</h1>
+					<h1 class="card-title red"><center><i class="fa-solid fa-bolt plan-icon"></i></center><br><br>Web Express</h1>
 					<br>
 					<p class="card-text">Perfecto para personas y pequeñas empresas que buscan una presencia en línea profesional.</p><br>
 					<h2 class="red">$10,500 MXN</h2>
@@ -144,7 +146,7 @@
 		<div class="col-lg-4 col-12 mb-3 d-flex align-items-stretch p-4">
 			<div class="card p-5">
 				<div class="card-body">
-					<h1 class="card-title red"><center><i class="fa-solid fa-gem plan-icon"></i></center><br><br>Web Premium</h1>
+					<h1 class="card-title red"><center><i class="fa-regular fa-gem plan-icon"></i></center><br><br>Web Premium</h1>
 					<br>
 					<p class="card-text">Ideal para empresas buscando una solución con todas las herramientas de marketing necesarias</p><br>
 					<h2 class="red">$16,000 MXN</h2>
@@ -221,13 +223,19 @@
 <script type="text/javascript">
 	$('.owl-one').owlCarousel({
 		loop:true,
+		autoplay:true,
+		slideTransition: 'linear',
+		autoplayTimeout: 4000,
+		autoplaySpeed: 4000,
+		autoplayHoverPause: true,
 		margin:0,
-		nav:true,
+		nav:false,
 		dots:false,
 		stagePadding: 0,
 		responsive:{
 			0:{
-				items:2
+				items:2,
+				autoplay: false
 			},
 			600:{
 				items:2

@@ -127,10 +127,9 @@ p{
 
 .plan-icon{
 	font-size: 64px;
-}
-
-.plan-icon:hover{
-	filter: brightness(1.5);
+	background: -webkit-linear-gradient(#ef233c, #480a12);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;	
 }
 
 hr{
@@ -240,9 +239,9 @@ hr{
 
 .card{
 	background-color: rgba(0, 0, 0, .2);
-	border-color: #fff;
-	border-width: 2px;
-	border-radius: 10px;
+	border-color: #ef233c;	
+    border-width: 2px;
+	border-radius: 5px;
 	box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 8);
 	text-align: left;
 	transition: .5s;
