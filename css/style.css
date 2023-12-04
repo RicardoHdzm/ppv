@@ -26,6 +26,9 @@ div{
 	filter: brightness(.8);
 }
 
+.navbar-toggler { margin: 0 auto; }
+
+
 .home{
 	height: 100vh;
 	text-align: center;
