@@ -14,6 +14,38 @@ div{
 
 h1{
 	font-size: large;
+	font-weight: bold;
+}
+
+h2{
+	font-size: large;
+}
+
+.red{
+	color: #ef233c;
+	font-weight: bold;
+}
+
+.typewriter p {
+	overflow: hidden; /* Ensures the content is not revealed until the animation */
+	border-right: 2px solid #fff; /* The typwriter cursor */
+	white-space: nowrap; /* Keeps the content on a single line */
+	margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+	letter-spacing: 4px; /* Adjust as needed */
+	animation: 
+	blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+	from { width: 0 }
+	to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+	from, to { border-color: transparent }
+	50% { border-color: #ef233c; }
 }
 
 .navbar{
@@ -21,13 +53,21 @@ h1{
 	font-size: small;
 }
 
+.navbar p{
+	font-size: small!important;
+}
+
+p{
+	font-size: small;
+}
+
 .navbar a{
 	font-size: small;
-	transition: .5s;
+	transition: .2s;
 }
 
 .navbar a:hover{
-	filter: brightness(.8);
+	color: #ef233c!important;
 }
 
 .navbar-toggler { margin: 0 auto; }
@@ -42,7 +82,7 @@ h1{
 	font-size: small;
 }
 
-.copyright{
+.copyright p{
 	text-align: center;
 	font-size: xx-small;
 	padding-top: 10rem!important;
@@ -65,15 +105,16 @@ h1{
 	border-width: thin;
 	border-color: #ffffff;
 	border-radius: 0px;
-	color: white;
+	color: #ffffff;
 	letter-spacing: 5px;
 	padding: 15px;
 	transition: .2s;
 }
 
 .btn:hover{
-	background-color: #ffffff;
+	background-color: #ef233c;
 	color: #000000;
+	border-color: #ef233c;
 	transform: translateY(-10%);
 }
 
@@ -82,6 +123,23 @@ h1{
 	transition: .2s;
 	margin: 10px;
 
+}
+
+.plan-icon{
+	font-size: 64px;
+}
+
+.plan-icon:hover{
+	filter: brightness(1.5);
+}
+
+hr{
+	border: 0;
+	width: 5%;
+	position: relative;
+	margin: 20px auto;
+	border-top: 2px solid #ef233c;
+	opacity: 100%;
 }
 
 .social-icon:hover{
@@ -116,9 +174,16 @@ h1{
 
 .social li:hover{
 	color: #000;
-	background-color: #fff;
+	background-color: #ef233c;
 	transform: translateY(-5%);
+	border-color: #ef233c;
 }
+
+.about{
+	height: fit-content;
+	text-align: center;
+}
+
 
 .clientes{
 	height: fit-content;
@@ -145,7 +210,7 @@ h1{
 
 /* width */
 ::-webkit-scrollbar {
-	width: 10px;
+	width: 3px;
 }
 
 /* Track */
@@ -160,7 +225,7 @@ h1{
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-	background: #f2f2f2;
+	background: #ef233c;
 }
 
 @media only screen and (max-width: 760px){
@@ -171,4 +236,52 @@ h1{
 	.main-logo{
 		width: 80%;
 	}
+}
+
+.card{
+	background-color: rgba(0, 0, 0, .2);
+	border-color: #fff;
+	border-width: 2px;
+	border-radius: 10px;
+	box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 8);
+	text-align: left;
+	transition: .5s;
+}
+
+.card:hover{
+	border-color: #ef233c;
+	transform: scale(105%);
+}
+
+.card p{
+	font-size: small;
+	letter-spacing: 1px;
+}
+
+.card ul {
+	--icon-space: 1.5em;
+	list-style: none;
+	padding: 0;
+	letter-spacing: 2px!important;
+
+}
+
+.card li {
+	padding-left: var(--icon-space);
+	font-size: small;
+	padding-bottom: 10px!important;
+}
+
+.card li:before {
+	content: "\f05b"; /* FontAwesome Unicode */
+	font-family: FontAwesome;
+	display: inline-block;
+	margin-left: calc( var(--icon-space) * -1 );
+	width: var(--icon-space);
+	color: #ef233c;
+	font-size: small;
+}
+
+.card .btn{
+	width: 100%;
 }
