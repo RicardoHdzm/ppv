@@ -107,3 +107,33 @@ div{
 	background-color: #fff;
 	transform: translateY(-5%);
 }
+
+/* width */
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	background: #070707;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: #fff;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: #f2f2f2;
+}
+
+@media only screen and (max-width: 760px){
+	.navbar a{
+		font-size: xx-small;
+	}
+
+	.main-logo{
+		width: 80%;
+	}
+}
