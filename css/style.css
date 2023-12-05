@@ -223,37 +223,6 @@ hr{
 	filter: brightness(.8);
 }
 
-
-/* width */
-::-webkit-scrollbar {
-	width: 3px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-	background: #070707;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-	background: #f6a90a;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-	background: #945706;
-}
-
-@media only screen and (max-width: 760px){
-	.navbar p{
-		font-size: xx-small;
-	}
-
-	.main-logo{
-		width: 80%;
-	}
-}
-
 .card{
 	background-color: rgba(0, 0, 0, .2);
 	border-color: #f6a90a;	
@@ -301,4 +270,30 @@ hr{
 
 .card .btn{
 	width: 100%;
+}
+
+@media only screen and (max-width: 760px){
+	.navbar p{
+		font-size: xx-small;
+	}
+
+	.main-logo{
+		width: 80%;
+	}
+}
+
+::-webkit-scrollbar {
+	width: 3px;
+}
+
+::-webkit-scrollbar-track {
+	background: #070707;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #f6a90a;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #dd9809;
 }
