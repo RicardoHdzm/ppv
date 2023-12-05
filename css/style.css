@@ -31,7 +31,7 @@ h2{
 }
 
 .yllw{
-	color: #f6a90a;
+	color: #86c232;
 	font-weight: bold;
 }
 
@@ -54,7 +54,7 @@ h2{
 /* The typewriter cursor effect */
 @keyframes blink-caret {
 	from, to { border-color: transparent }
-	50% { border-color: #f6a90a; }
+	50% { border-color: #86c232; }
 }
 
 .navbar{
@@ -76,7 +76,7 @@ p{
 }
 
 .navbar a:hover{
-	color: #f6a90a!important;
+	color: #86c232!important;
 }
 
 .navbar-toggler { margin: 0 auto; }
@@ -120,9 +120,9 @@ p{
 }
 
 .btn:hover{
-	background-color: #f6a90a;
+	background-color: #86c232;
 	color: #000000;
-	border-color: #f6a90a;
+	border-color: #86c232;
 	transform: translateY(-10%);
 }
 
@@ -140,7 +140,7 @@ p{
 
 .plan-icon{
 	font-size: 64px;
-	background: -webkit-linear-gradient(#f6a90a, #945706);
+	background: -webkit-linear-gradient(#86c232, #283a0f);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;	
 }
@@ -150,7 +150,7 @@ hr{
 	width: 50px;
 	position: relative;
 	margin: 20px auto;
-	border-top: 2px solid #f6a90a;
+	border-top: 2px solid #86c232;
 	opacity: 100%;
 }
 
@@ -186,9 +186,9 @@ hr{
 
 .social li:hover{
 	color: #000;
-	background-color: #f6a90a;
+	background-color: #86c232;
 	transform: translateY(-5%);
-	border-color: #f6a90a;
+	border-color: #86c232;
 }
 
 .about{
@@ -220,12 +220,13 @@ hr{
 }
 
 .img-cliente:hover{
+	transform: translateY(-5px);
 	filter: brightness(.8);
 }
 
 .card{
 	background-color: rgba(0, 0, 0, .2);
-	border-color: #f6a90a;	
+	border-color: #86c232;	
 	border-width: 2px;
 	border-radius: 5px;
 	box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 8);
@@ -234,7 +235,7 @@ hr{
 }
 
 .card:hover{
-	border-color: #f6a90a;
+	border-color: #86c232;
 	transform: scale(105%);
 	background-color: #000;
 }
@@ -264,7 +265,7 @@ hr{
 	display: inline-block;
 	margin-left: calc( var(--icon-space) * -1 );
 	width: var(--icon-space);
-	color: #f6a90a;
+	color: #86c232;
 	font-size: small;
 }
 
@@ -295,9 +296,9 @@ hr{
 }
 
 ::-webkit-scrollbar-thumb {
-	background: #f6a90a;
+	background: #86c232;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-	background: #dd9809;
+	background: #283a0f;
 }
