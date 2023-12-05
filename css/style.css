@@ -280,6 +280,10 @@ hr{
 	.main-logo{
 		width: 80%;
 	}
+
+	.img-cliente{
+		width: 125px!important;
+	}
 }
 
 ::-webkit-scrollbar {
