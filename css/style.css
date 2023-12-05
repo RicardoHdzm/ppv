@@ -27,11 +27,11 @@ h2{
 }
 
 .typewriter p {
-	overflow: hidden; /* Ensures the content is not revealed until the animation */
-	border-right: 2px solid #fff; /* The typwriter cursor */
-	white-space: nowrap; /* Keeps the content on a single line */
-	margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-	letter-spacing: 4px; /* Adjust as needed */
+	overflow: hidden; 
+	border-right: 2px solid #fff;
+	white-space: nowrap; 
+	margin: 0 auto; 
+	letter-spacing: 4px;
 	animation: 
 	blink-caret .75s step-end infinite;
 }
@@ -95,7 +95,6 @@ p{
 .footer-logo{
 	width: 125px;
 }
-
 
 
 .btn{
@@ -179,16 +178,20 @@ hr{
 }
 
 .about{
+	height: 100vh;
+	text-align: center;
+
+}
+
+.plan{
 	height: fit-content;
 	text-align: center;
 }
 
 
 .clientes{
-	height: fit-content;
+	height: 100vh;
 	text-align: center;
-	padding-top: 10rem!important;
-	padding-bottom: 10rem!important;
 }
 
 .img-mrg{
@@ -219,12 +222,12 @@ hr{
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-	background: #fff;
+	background: #ef233c;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-	background: #ef233c;
+	background: #a7192a;
 }
 
 @media only screen and (max-width: 760px){
@@ -250,6 +253,7 @@ hr{
 .card:hover{
 	border-color: #ef233c;
 	transform: scale(105%);
+	background-color: #000;
 }
 
 .card p{
