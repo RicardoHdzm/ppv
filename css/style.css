@@ -36,8 +36,9 @@ div{
 }
 
 h1{
-	font-size: large;
+	font-size: x-large;
 	font-weight: bold;
+	letter-spacing: 10px;
 }
 
 h2{
@@ -178,17 +179,17 @@ p{
 
 .plan-icon{
 	font-size: 64px;
-	background: -webkit-linear-gradient(#86c232, #283a0f);
+	background: -webkit-linear-gradient(#86c232, #4b6d1c);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;	
 }
 
 hr{
 	border: 0;
-	width: 50px;
+	width: 64px;
 	position: relative;
 	margin: 20px auto;
-	border-top: 2px solid #86c232;
+	border-top: 3px solid #86c232;
 	opacity: 100%;
 }
 
@@ -415,7 +416,7 @@ hr{
 }
 
 ::-webkit-scrollbar-track {
-	background: #070707;
+	background: #080808;
 }
 
 ::-webkit-scrollbar-thumb {
