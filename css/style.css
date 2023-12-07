@@ -22,14 +22,20 @@ h1{
 	font-size: x-large;
 	font-weight: bold;
 	letter-spacing: 10px;
+	padding-top: 15px;
+	padding-bottom: 15px;
 }
 
 h2{
 	font-size: large;
+	padding-top: 15px;
+	padding-bottom: 15px;
 }
 
 p{
 	font-size: small;
+	padding-top: 15px;
+	padding-bottom: 15px;
 }
 
 hr{
@@ -37,13 +43,13 @@ hr{
 	width: 64px;
 	position: relative;
 	margin: 20px auto;
-	border-top: 3px solid #00a2e2;
+	border-top: 3px solid #2596BE;
 	opacity: 100%;
 }
 
 ::selection {
-	color: #080808;
-	background: #00a2e2;
+	color: #000;
+	background: #2596BE;
 }
 
 /* ANIMATIONS */
@@ -57,7 +63,7 @@ hr{
 }
 
 .highlight{
-	color: #00a2e2;
+	color: #2596BE;
 }
 
 @keyframes typing {
@@ -67,7 +73,7 @@ hr{
 
 @keyframes blink-caret {
 	from, to { border-color: transparent }
-	50% { border-color: #00a2e2; }
+	50% { border-color: #2596BE; }
 }
 
 @keyframes float-btn {
@@ -109,6 +115,8 @@ hr{
 	letter-spacing: 4px;
 	animation: 
 	blink-caret .75s step-end infinite;
+	padding-top: 0px!important;
+	padding-bottom: 0px!important;
 }
 
 .nav-item a{
@@ -119,13 +127,13 @@ hr{
 }
 
 .nav-item a:hover{
-	color: #00a2e2!important;
+	color: #2596BE!important;
 	text-decoration: underline;
 	text-underline-offset: 10px;
 }
 
 .nav-link.active {
-	color: #00a2e2;          
+	color: #2596BE;          
 }
 
 .navbar-toggler { 
@@ -133,7 +141,7 @@ hr{
 }
 
 .custom-toggler .navbar-toggler-icon {
-	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 162, 226, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(37, 150, 190, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
 
 .custom-toggler.navbar-toggler {
@@ -191,6 +199,7 @@ hr{
 
 .footer-logo{
 	width: 80px;
+	padding: 0px!important;
 }
 
 /* BUTTONS */
@@ -200,9 +209,9 @@ hr{
 	font-size: small;
 	border: solid;
 	border-width: thin;
-	border-color: #00a2e2;
+	border-color: #2596BE;
 	border-radius: 0px;
-	color: #00a2e2;
+	color: #2596BE;
 	letter-spacing: 5px;
 	padding: 15px;
 	transition: .2s;
@@ -210,9 +219,9 @@ hr{
 }
 
 .btn:hover{
-	background-color: #00a2e2;
+	background-color: #2596BE;
 	color: #000000;
-	border-color: #00a2e2;
+	border-color: #2596BE;
 	transform: translateY(-10%);
 }
 
@@ -225,7 +234,9 @@ hr{
 
 .plan-icon{
 	font-size: 64px;
-	color: #00a2e2;	
+	color: #2596BE;
+	padding-top: 15px;
+	padding-bottom: 15px;
 }
 
 .social-icon{
@@ -249,7 +260,7 @@ hr{
 
 .social li{
 	font-size: 25px;
-	color: #00a2e2;
+	color: #2596BE;
 	list-style-type: none;
 	display: inline-block;
 	width: 50px;
@@ -257,7 +268,7 @@ hr{
 	line-height: 50px;
 	padding-top: .5px;
 	padding-left: 5px;
-	border: 1px solid #00a2e2;
+	border: 1px solid #2596BE;
 	cursor: pointer;
 	margin-left: 10px;
 	margin-right: 10px;
@@ -268,9 +279,9 @@ hr{
 
 .social li:hover{
 	color: #000;
-	background-color: #00a2e2;
+	background-color: #2596BE;
 	transform: translateY(-5%);
-	border-color: #00a2e2;
+	border-color: #2596BE;
 }
 
 /* IMG */
@@ -290,7 +301,7 @@ hr{
 
 .card{
 	background-color: transparent;
-	border-color: #00a2e2;	
+	border-color: #2596BE;	
 	border-width: 1.5px;
 	border-radius: 5px;
 	text-align: left;
@@ -299,7 +310,7 @@ hr{
 
 .card:hover{
 	transform: scale(110%);
-	background-color: rgba(0, 162, 226, .8);
+	background-color: rgba(37, 150, 190, .8);
 	border-color: transparent;
 }
 
@@ -351,7 +362,7 @@ hr{
 .card:hover .btn:hover{
 	background-color: #000;
 	border-color: #000;
-	color: #00a2e2;
+	color: #2596BE;
 }
 
 .card p{
@@ -386,7 +397,7 @@ hr{
 	display: inline-block;
 	margin-left: calc( var(--icon-space) * -1 );
 	width: var(--icon-space);
-	color: #00a2e2;
+	color: #2596BE;
 	font-size: medium;
 }
 
@@ -442,7 +453,7 @@ hr{
 }
 
 ::-webkit-scrollbar-thumb {
-	background: #00a2e2;
+	background: #2596BE;
 }
 
 ::-webkit-scrollbar-thumb:hover {
