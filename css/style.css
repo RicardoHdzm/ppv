@@ -133,7 +133,7 @@ hr{
 }
 
 .custom-toggler .navbar-toggler-icon {
-	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(134, 194, 50, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 162, 226, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
 
 .custom-toggler.navbar-toggler {
@@ -225,9 +225,7 @@ hr{
 
 .plan-icon{
 	font-size: 64px;
-	background: -webkit-linear-gradient(#00a2e2, #003144);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;	
+	color: #00a2e2;	
 }
 
 .social-icon{
@@ -336,9 +334,7 @@ hr{
 }
 
 .card:hover .plan-icon{
-	background: -webkit-linear-gradient(#121212, #000);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
+	color: #000	;
 }
 
 .card:hover .card-text{
@@ -450,5 +446,5 @@ hr{
 }
 
 ::-webkit-scrollbar-thumb:hover {
-	background: #003144
+	background: #00719e;
 }
