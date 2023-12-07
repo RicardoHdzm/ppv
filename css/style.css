@@ -202,6 +202,11 @@ hr{
 	padding: 0px!important;
 }
 
+:target:before {
+    content: "";
+    display: block;
+}
+
 /* BUTTONS */
 
 .btn{
