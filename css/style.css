@@ -81,7 +81,7 @@ hr{
 		transform: scale(1.0);
 	}
 	50% {
-		transform: scale(1.1);
+		transform: scale(1.05);
 	}
 	100%{
 		transform: scale(1.0);
@@ -203,8 +203,8 @@ hr{
 }
 
 :target:before {
-    content: "";
-    display: block;
+	content: "";
+	display: block;
 }
 
 /* BUTTONS */
@@ -314,9 +314,10 @@ hr{
 }
 
 .card:hover{
-	transform: scale(110%);
 	background-color: rgba(37, 150, 190, .8);
 	border-color: transparent;
+	animation: float-btn 2s infinite linear;
+
 }
 
 .card:hover kursor{
