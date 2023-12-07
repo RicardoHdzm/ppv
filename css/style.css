@@ -37,13 +37,13 @@ hr{
 	width: 64px;
 	position: relative;
 	margin: 20px auto;
-	border-top: 3px solid #299fc3;
+	border-top: 3px solid #00a2e2;
 	opacity: 100%;
 }
 
 ::selection {
 	color: #080808;
-	background: #299fc3;
+	background: #00a2e2;
 }
 
 /* ANIMATIONS */
@@ -57,7 +57,7 @@ hr{
 }
 
 .highlight{
-	color: #299fc3;
+	color: #00a2e2;
 }
 
 @keyframes typing {
@@ -67,7 +67,7 @@ hr{
 
 @keyframes blink-caret {
 	from, to { border-color: transparent }
-	50% { border-color: #299fc3; }
+	50% { border-color: #00a2e2; }
 }
 
 @keyframes float-btn {
@@ -119,13 +119,13 @@ hr{
 }
 
 .nav-item a:hover{
-	color: #299fc3!important;
+	color: #00a2e2!important;
 	text-decoration: underline;
 	text-underline-offset: 10px;
 }
 
 .nav-link.active {
-	color: #299fc3;          
+	color: #00a2e2;          
 }
 
 .navbar-toggler { 
@@ -200,9 +200,9 @@ hr{
 	font-size: small;
 	border: solid;
 	border-width: thin;
-	border-color: #299fc3;
+	border-color: #00a2e2;
 	border-radius: 0px;
-	color: #299fc3;
+	color: #00a2e2;
 	letter-spacing: 5px;
 	padding: 15px;
 	transition: .2s;
@@ -210,9 +210,9 @@ hr{
 }
 
 .btn:hover{
-	background-color: #299fc3;
+	background-color: #00a2e2;
 	color: #000000;
-	border-color: #299fc3;
+	border-color: #00a2e2;
 	transform: translateY(-10%);
 }
 
@@ -225,7 +225,7 @@ hr{
 
 .plan-icon{
 	font-size: 64px;
-	background: -webkit-linear-gradient(#299fc3, #4b6d1c);
+	background: -webkit-linear-gradient(#00a2e2, #003144);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;	
 }
@@ -251,7 +251,7 @@ hr{
 
 .social li{
 	font-size: 25px;
-	color: #299fc3;
+	color: #00a2e2;
 	list-style-type: none;
 	display: inline-block;
 	width: 50px;
@@ -259,7 +259,7 @@ hr{
 	line-height: 50px;
 	padding-top: .5px;
 	padding-left: 5px;
-	border: 1px solid #299fc3;
+	border: 1px solid #00a2e2;
 	cursor: pointer;
 	margin-left: 10px;
 	margin-right: 10px;
@@ -270,9 +270,9 @@ hr{
 
 .social li:hover{
 	color: #000;
-	background-color: #299fc3;
+	background-color: #00a2e2;
 	transform: translateY(-5%);
-	border-color: #299fc3;
+	border-color: #00a2e2;
 }
 
 /* IMG */
@@ -292,7 +292,7 @@ hr{
 
 .card{
 	background-color: transparent;
-	border-color: #299fc3;	
+	border-color: #00a2e2;	
 	border-width: 1.5px;
 	border-radius: 5px;
 	text-align: left;
@@ -301,7 +301,7 @@ hr{
 
 .card:hover{
 	transform: scale(110%);
-	background-color: rgba(134, 194, 50, .8);
+	background-color: rgba(0, 162, 226, .8);
 	border-color: transparent;
 }
 
@@ -355,7 +355,7 @@ hr{
 .card:hover .btn:hover{
 	background-color: #000;
 	border-color: #000;
-	color: #299fc3;
+	color: #00a2e2;
 }
 
 .card p{
@@ -390,7 +390,7 @@ hr{
 	display: inline-block;
 	margin-left: calc( var(--icon-space) * -1 );
 	width: var(--icon-space);
-	color: #299fc3;
+	color: #00a2e2;
 	font-size: medium;
 }
 
@@ -446,9 +446,9 @@ hr{
 }
 
 ::-webkit-scrollbar-thumb {
-	background: #299fc3;
+	background: #00a2e2;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-	background: #6b9b28;
+	background: #003144
 }
