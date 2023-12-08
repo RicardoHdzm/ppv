@@ -316,7 +316,7 @@ hr{
 .card:hover{
 	background-color: rgba(37, 150, 190, .8);
 	border-color: transparent;
-	animation: float-btn 2s infinite linear;
+	animation: float-btn 1.5s infinite linear;
 
 }
 
