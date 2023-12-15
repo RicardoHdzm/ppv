@@ -416,7 +416,7 @@ hr{
 
 /* SCREEN */
 
-@media only screen and (max-width: 760px){
+@media only screen and (max-width: 1024px){
 
 	.navbar p{
 		font-size: small;
