@@ -445,6 +445,12 @@ hr{
 	.img-cliente{
 		width: 125px!important;
 	}
+
+	.mobile-h{
+		height: fit-content!important;
+		padding-top: 10vh!important;
+		padding-bottom: 10vh!important;
+	}
 }
 
 /* SCROLLBAR */
