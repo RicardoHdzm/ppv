@@ -302,6 +302,11 @@ td{
 		width: 80%;
 	}
 
+	body{
+		background-attachment: scroll;
+		background-position: center;
+	}
+
 	h1{
 		font-size: x-large;
 	}
