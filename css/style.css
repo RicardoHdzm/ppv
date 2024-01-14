@@ -266,15 +266,9 @@ td{
 
 /* IMG */
 
-.img-cliente{
-	width: 150px!important;
-	filter: brightness(0) invert(.9);
-	transition: .25s;
-}
-
-.img-cliente:hover{
-	filter: none;
-	transform: translateY(-5px);
+.icon{
+	width: 50px;
+	filter: invert(100%);
 }
 
 /* CARDS */
@@ -303,6 +297,7 @@ td{
 	}
 
 	body{
+		background-image: url("../img/background/bgm.png");
 		background-attachment: scroll;
 		background-position: center;
 	}
