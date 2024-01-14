@@ -295,7 +295,7 @@ td{
 	}
 
 	.navbar a{
-		font-size: xx-small;
+		font-size: small;
 	}
 
 	.main-logo{
@@ -328,11 +328,11 @@ td{
 /* SCROLLBAR */
 
 ::-webkit-scrollbar {
-	width: 8px;
+	width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-	background: #491a6a;
+	background: rgb(0, 0, 0);
 }
 
 ::-webkit-scrollbar-thumb {
