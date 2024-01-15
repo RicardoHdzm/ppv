@@ -47,6 +47,13 @@ p{
 	padding-bottom: 15px;
 }
 
+.year{
+	color: #ac1c1c;
+	background-color: #fff;
+	letter-spacing: 0px;
+	font-weight: bold;
+}
+
 ::selection {
 	color: #ac1c1c;
 	background: #fff;
