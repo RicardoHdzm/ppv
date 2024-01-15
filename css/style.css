@@ -79,6 +79,7 @@ p{
 
 .nav-link.active {
 	font-weight: bolder;
+	font-size: medium;
 }
 
 .navbar-toggler { 
@@ -207,7 +208,8 @@ td{
 /* IMG */
 
 .icon{
-	width: 50px;
+	width: 45px;
+	margin: 15px;
 }
 
 /* CARDS */
@@ -261,6 +263,10 @@ td{
 		font-size: small;
 	}
 
+	.nav-link.active {
+		font-size: small!important;
+	}
+
 }
 
 /* SCROLLBAR */
@@ -270,7 +276,7 @@ td{
 }
 
 ::-webkit-scrollbar-track {
-	background: rgb(0, 0, 0);
+	background: #282828;
 }
 
 ::-webkit-scrollbar-thumb {
