@@ -234,11 +234,11 @@ td{
 	}
 
 	.nav-logo{
-		width: 150px;
+		width: 75px;
 	}
 
 	.main-logo{
-		width: 100%;
+		width: 90%;
 	}
 
 	body{
@@ -248,23 +248,23 @@ td{
 	}
 
 	h1{
-		font-size: xx-large;
-	}
-
-	h2{
 		font-size: x-large;
 	}
 
-	h3{
+	h2{
 		font-size: large;
 	}
 
-	p{
+	h3{
 		font-size: medium;
 	}
 
+	p{
+		font-size: small;
+	}
+
 	.nav-link.active {
-		font-size: medium!important;
+		font-size: medium;!important;
 	}
 
 }
