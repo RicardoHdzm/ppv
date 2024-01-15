@@ -226,19 +226,19 @@ td{
 @media only screen and (max-width: 1024px){
 
 	.navbar p{
-		font-size: small;
+		font-size: medium;
 	}
 
 	.navbar a{
-		font-size: small;
+		font-size: medium;
 	}
 
 	.nav-logo{
-		width: 65px;
+		width: 150px;
 	}
 
 	.main-logo{
-		width: 90%;
+		width: 100%;
 	}
 
 	body{
@@ -248,23 +248,23 @@ td{
 	}
 
 	h1{
-		font-size: x-large;
+		font-size: xx-large;
 	}
 
 	h2{
-		font-size: large;
+		font-size: x-large;
 	}
 
 	h3{
-		font-size: medium;
+		font-size: large;
 	}
 
 	p{
-		font-size: small;
+		font-size: medium;
 	}
 
 	.nav-link.active {
-		font-size: small!important;
+		font-size: medium!important;
 	}
 
 }
