@@ -328,7 +328,7 @@ td{
 }
 
 .type{
-	height: 18px;
+	width: 90px;
 }
 
 .glosary{
@@ -426,6 +426,10 @@ td{
 
 	.btn{
 		font-size: x-small;
+	}
+
+	.type{
+		width: 75px;
 	}
 }
 
