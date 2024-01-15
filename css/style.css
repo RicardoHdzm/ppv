@@ -48,8 +48,8 @@ p{
 }
 
 ::selection {
-	color: #fff;
-	background: #ac1c1c;
+	color: #ac1c1c;
+	background: #fff;
 }
 
 /* NAVBAR */
@@ -195,7 +195,7 @@ td{
 	transform: translateY(-15%);
 }
 
-.btn:focus{
+.btn:focus, .btn:active{
 	box-shadow: none!important;
 	outline: 0;
 }
