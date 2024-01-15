@@ -1,16 +1,23 @@
 body{
+	font-family: 'Roboto', sans-serif;
 	color: #fff;
 	background-color: #b01c1c;
-	font-family: 'Roboto', sans-serif;
-	scroll-behavior: smooth;
-	overflow-x: hidden;
-	letter-spacing: 5px;
-	padding-top: 25px;
 	background-image: url("../img/background/bg.png");
 	background-attachment: fixed;
 	background-size: cover;
 	position: relative;
 	height: 100%;
+	scroll-behavior: smooth;
+	overflow-x: hidden;
+	letter-spacing: 8px;
+	text-transform: uppercase;
+	padding-top: 25px;
+	transition: .5s;
+}
+
+.dark-mode {
+	background-color: black;
+	background-image: url("../img/background/bg-d.png");
 }
 
 div{
@@ -22,8 +29,8 @@ div{
 
 h1{
 	font-size: 48px;
-	font-weight: bold;
 	letter-spacing: 10px;
+	font-weight: bold;
 	padding-top: 15px;
 	padding-bottom: 15px;
 }
@@ -45,6 +52,7 @@ p{
 	font-size: small;
 	padding-top: 15px;
 	padding-bottom: 15px;
+	letter-spacing: 5px;
 }
 
 .year{
@@ -64,6 +72,7 @@ p{
 .navbar{
 	background-color: rgba(0, 0, 0, .2);
 	font-size: small;
+	transition: .5s;
 }
 
 .navbar p{
@@ -126,9 +135,13 @@ p{
 }
 
 .standing-table{
-	background-color: rgba(255, 255, 255, .25);
+	background-color: rgba(255, 255, 255, .3);
 	font-weight: bolder;
 	font-size: x-large;
+}
+
+.next{
+	background-color: rgba(255, 255, 255, .3);
 }
 
 th{
@@ -138,19 +151,30 @@ th{
 td{
 	color: #fff;
 	font-weight: bold;
-	text-transform: uppercase;
+}
+
+.select{
+	transition: .5s;
+}
+
+.select:hover{
+	background-color: rgba(0, 0, 0, .5);
+}
+
+.table{
+	letter-spacing: 5px;
 }
 
 .rank1{
-	background-color: rgba(220, 164, 4, .7);
+	background-color: rgba(220, 164, 4, .6);
 }
 
 .rank2{
-	background-color: rgb(140,140,140, .7);
+	background-color: rgb(140,140,140, .6);
 }
 
 .rank3{
-	background-color: rgb(172,100,12, .7);
+	background-color: rgb(172,100,12, .6);
 }
 
 
@@ -188,11 +212,12 @@ td{
 	border-color: #fff;
 	border-radius: 8px;
 	color: #fff;
-	letter-spacing: 5px;
-	padding: 10px;
+	letter-spacing: 1px;
+	padding: 20px;
 	transition: .2s;
 	cursor: none!important;
 	width: 100%;
+	height: auto;
 }
 
 .btn:hover{
@@ -207,6 +232,93 @@ td{
 	outline: 0;
 }
 
+.btn2{
+	background-color: transparent;
+	font-size: small;
+	font-weight: bold;
+	border: solid;
+	border-width: thin;
+	border-color: #fff;
+	border-radius: 8px;
+	color: #fff;
+	letter-spacing: 1px;
+	padding: 20px;
+	transition: .2s;
+	cursor: none!important;
+	width: 200;
+	height: auto;
+	text-decoration: none;
+}
+
+.btn2:hover{
+	background-color: rgba(255, 255, 255, .25);
+	color: #fff;
+	border-color: #fff;
+	transform: translateY(-15%);
+}
+
+.btn2:focus, .btn2:active{
+	box-shadow: none!important;
+	outline: 0;
+}
+
+.iconx{
+	width: 35px;
+}
+
+#darkBtn {
+	position: fixed;
+	bottom: 40px;
+	right: 40px;
+	z-index: 90;
+	outline: none; 
+	background-color: #ac1c1c; 
+	cursor: pointer;
+	font-weight: bolder;
+	border-color: #fff!important;
+	border: solid;
+	border-width: 5px;
+	transition: 0.5s ease;
+	border-radius: 100%;
+	padding: 10px!important;
+}
+
+#darkBtn:hover {
+	background-color: #080808;
+	transform: translateY(-10px);
+}
+
+
+/* DARK MODE */
+
+.dark-mode #darkBtn {
+	background-color: #080808; /* Set a background color */
+}
+
+.dark-mode #darkBtn:hover {
+	background-color: #ac1c1c;
+}
+
+.dark-mode .navbar{
+	background-color: rgba(0, 0, 0, .95);
+}
+
+.dark-mode .standing-table{
+	background-color: rgba(255, 255, 255, .1);
+}
+
+.dark-mode .year{
+	color: #000;
+}
+
+.dark-mode .select:hover{
+	background-color: rgba(255, 255, 255, .2);
+}
+
+.dark-mode ::selection {
+	color: #000;
+	background: #fff;
+}
 
 /* IMG */
 
@@ -217,6 +329,31 @@ td{
 
 .type{
 	height: 18px;
+}
+
+.glosary{
+	font-size: xx-small!important;
+	letter-spacing: 0px;
+}
+
+
+.fa-circle-minus{
+	font-size: large;
+}
+
+.fa-circle-up{
+	color: #00ff51;
+	font-size: large;
+}
+
+.fa-circle-down{
+	color: #Ff6a00;
+	font-size: large;
+}
+
+.fa-circle-plus{
+	color: #00f1ff;
+	font-size: large;
 }
 
 /* CARDS */
@@ -231,6 +368,10 @@ td{
 /* SCREEN */
 
 @media only screen and (max-width: 1024px){
+
+	.dark-mode{
+		background-image: url("../img/background/bgm-d.png");
+	}
 
 	.navbar{
 		background-color: rgba(0, 0, 0, .7);
@@ -305,5 +446,5 @@ td{
 }
 
 ::-webkit-scrollbar-thumb:hover {
-	background: #b01c1c;
+	background: whitesmoke;
 }
