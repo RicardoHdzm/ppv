@@ -21,8 +21,6 @@
 	<script src="js/script.js"></script>
 	<link rel="icon" href="img/logos/navicon.png">
 	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body data-bs-spy="scroll" data-bs-target="#Navbar" data-bs-offset="100">
@@ -41,7 +39,7 @@
 						<a class="nav-link" href="#calendario">CALENDARIO</a>
 					</li>
 					<li class="nav-item px-4 py-3">
-						<a class="nav-link" href="#standing">STANDING</a>
+						<a class="nav-link" href="#leaderboard">LEADERBOARD</a>
 					</li>
 					<li class="nav-item px-4 py-3">
 						<a class="nav-link" href="#resultados">RESULTADOS</a>
@@ -59,7 +57,7 @@
 		</div>
 	</section>
 
-	<section id="calendario" class="about">
+	<section id="calendario" class="pkmn">
 		<div class="container-fluid standing py-5" data-aos="fade-in">
 			<div class="my-5" data-aos="fade-up">
 				<div class="row justify-content-center">
@@ -136,84 +134,83 @@
 		</div>
 	</section>
 
-	<section id="standing" class="about">
+	<section id="leaderboard" class="pkmn">
 		<div class="container-fluid standing py-5" data-aos="fade-in">
 			<div class="row justify-content-center">
 				<div class="col-lg-6 py-lg-3 px-5">					
 					<img src="img/logos/icon.png" class="icon">
-					<h1>STANDING</h1>
+					<h1>LEADERBOARD</h1>
 					<table class="table p-5">
 						<table class="table" style="text-align:center;">
 							<thead>
 								<tr class="standing-table">
-									<th scope="col">POS</th>
+									<th scope="col">RANK</th>
 									<th scope="col">TRAINER</th>
-									<th scope="col">PTS</th>
+									<th scope="col">SCORE</th>
 								</tr>
 							</thead>
 							<tbody>
-
-								<tr class="player">
+								<tr class="rank1">
 									<th scope="row">1</th>
 									<td>Patrón</td>
 									<td>21</td>
 								</tr>
-								<tr class="player">
+								<tr class="rank2">
 									<th scope="row">2</th>
 									<td>Mena</td>
 									<td>19</td>
 								</tr>
-								<tr class="player">
+								<tr class="rank3">
 									<th scope="row">3</th>
 									<td>Canolo</td>
 									<td>16</td>
 								</tr>
-								<tr class="player">
+								<tr>
 									<th scope="row">4</th>
 									<td>Avi</td>
 									<td>13</td>
 								</tr>
-								<tr class="player">
+								<tr>
 									<th scope="row">5</th>
 									<td>Julio</td>
 									<td>10</td>
 								</tr>
-								<tr class="player">
+								<tr>
 									<th scope="row">5</th>
 									<td>Rick</td>
 									<td>10</td>
 								</tr>
-								<tr class="player">
+								<tr>
 									<th scope="row">6</th>
 									<td>Kevin</td>
 									<td>9</td>
 								</tr>
-								<tr class="player">
+								<tr>
 									<th scope="row">7</th>
 									<td>JuanC</td>
 									<td>8</td>
 								</tr>
-								<tr class="player">
+								<tr>
 									<th scope="row">8</th>
 									<td>Vampi</td>
 									<td>7</td>
 								</tr>
-								<tr class="player">
+								<tr>
 									<th scope="row">9</th>
 									<td>Gus</td>
 									<td>6</td>
 								</tr>
-								<tr class="player">
+								<tr>
 									<th scope="row">10</th>
 									<td>Pulpo</td>
 									<td>4</td>
 								</tr>
-								<tr class="player">
+								<tr>
 									<th scope="row">11</th>
 									<td>AA</td>
 									<td>-2</td>
 								</tr>
-								<tr class="player">
+								<tr>
 									<th scope="row">11</th>
 									<td>Cruz</td>
 									<td>-2</td>
@@ -228,7 +225,7 @@
 		</div>
 	</section>
 
-	<section id="resultados" class="about">
+	<section id="resultados" class="pkmn">
 		<div class="container-fluid standing py-5" data-aos="fade-in">
 			<div class="row justify-content-center">
 				<div class="col-lg-12 py-lg-3 px-5">	
@@ -237,111 +234,111 @@
 					<br>
 					<div class="row justify-content-center py-4">
 						<div class="col-lg-4 col-12 py-4 px-5">
-							<a class="btn" data-bs-toggle="collapse" href="#collapseT1" role="button" aria-expanded="false" aria-controls="collapseT1">DIC 22 | 2023 <br> REGULATION E</a>
+							<a class="btn" data-bs-toggle="collapse" href="#event1" role="button" aria-expanded="false" aria-controls="event1">DIC 22 | 2023 <br> REGULATION E</a>
 						</div>
 						<div class="col-lg-4 col-12 py-4 px-5">
-							<a class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseT2" aria-expanded="false" aria-controls="collapseT2">ENERO 12 <br> MONOTYPES</a>
+							<a class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#event2" aria-expanded="false" aria-controls="event2">ENERO 12 <br> MONOTYPES</a>
 						</div>
 						<div class="col-lg-4 col-12 py-4 px-5">
-							<a class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseT3" aria-expanded="false" aria-controls="collapseT3">FEBRERO 10 <br> TAG TEAM</a>
+							<a class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#event3" aria-expanded="false" aria-controls="event3">FEBRERO 10 <br> TAG TEAM</a>
 						</div>
 						<!--<div class="col-lg-4 col-12 py-4 px-5">
-							<a class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseT4" aria-expanded="false" aria-controls="collapseT3">MARZO <br> REGULATION</a>
+							<a class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#event4" aria-expanded="false" aria-controls="event3">MARZO <br> REGULATION</a>
 						</div>
 						<div class="col-lg-3 col-12 py-4 px-5">
-							<a class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseT5" aria-expanded="false" aria-controls="collapseT3">ABRIL <br> LITTLE CUP</a>
+							<a class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#event5" aria-expanded="false" aria-controls="event5">ABRIL <br> LITTLE CUP</a>
 						</div>
 						<div class="col-lg-3 col-12 py-4 px-5">
-							<a class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseT6" aria-expanded="false" aria-controls="collapseT3">MAYO <br> A B C P K M N</a>
+							<a class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#event6" aria-expanded="false" aria-controls="event6">MAYO <br> A B C P K M N</a>
 						</div>
 						<div class="col-lg-3 col-12 py-4 px-5">
-							<a class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseT7" aria-expanded="false" aria-controls="collapseT3">JUNIO <br> REGULATION</a>
+							<a class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#event7" aria-expanded="false" aria-controls="event7">JUNIO <br> REGULATION</a>
 						</div>
 						<div class="col-lg-3 col-12 py-4 px-5">
-							<a class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseT8" aria-expanded="false" aria-controls="collapseT3">JULIO <br> MONOTYPES 2</a>
+							<a class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#event8" aria-expanded="false" aria-controls="event8">JULIO <br> MONOTYPES 2</a>
 						</div>
 						<div class="col-lg-3 col-12 py-4 px-5">
-							<a class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseT9" aria-expanded="false" aria-controls="collapseT3">AGOSTO <br> GENERATIONS</a>
+							<a class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#event9" aria-expanded="false" aria-controls="event9">AGOSTO <br> GENERATIONS</a>
 						</div>
 						<div class="col-lg-3 col-12 py-4 px-5">
-							<a class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseT10" aria-expanded="false" aria-controls="collapseT3">SEPT <br> REGULATION</a>
+							<a class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#event10" aria-expanded="false" aria-controls="event10">SEPT <br> REGULATION</a>
 						</div>
 						<div class="col-lg-3 col-12 py-4 px-5">
-							<a class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseT11" aria-expanded="false" aria-controls="collapseT3">OCT<br> POKEDRAFT</a>
+							<a class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#event11" aria-expanded="false" aria-controls="event11">OCT<br> POKEDRAFT</a>
 						</div>
 						<div class="col-lg-3 col-12 py-4 px-5">
-							<a class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseT12" aria-expanded="false" aria-controls="collapseT3">NOV <br> SINGLES</a>
+							<a class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#event12" aria-expanded="false" aria-controls="event12">NOV <br> SINGLES</a>
 						</div>
 						<div class="col-lg-3 col-12 py-4 px-5">
-							<a class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseT13" aria-expanded="false" aria-controls="collapseT3">DIC <br> REGULATION</a>
+							<a class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#event13" aria-expanded="false" aria-controls="event13">DIC <br> REGULATION</a>
 						</div>-->
 					</div>
 					<div id="myGroup">
 						<div class="row h-100 justify-content-center py-5">
 							<div class="col-lg-6">
-								<div class="collapse" id="collapseT1" data-bs-parent="#myGroup">
+								<div class="collapse" id="event1" data-bs-parent="#myGroup">
 									<h3>DIC 22 | 2023</h3> <h2>REGULATION E</h2>
 									<div class="card card-body">
 										<table class="table p-5">
 											<table class="table" style="text-align:center;">
 												<thead>
 													<tr class="standing-table">
-														<th scope="col">POS</th>
+														<th scope="col">RANK</th>
 														<th scope="col">TRAINER</th>
-														<th scope="col">PTS</th>
+														<th scope="col">SCORE</th>
 													</tr>
 												</thead>
 												<tbody>
 
-													<tr class="player">
+													<tr class="rank1">
 														<th scope="row">1</th>
 														<td>Patrón</td>
 														<td>9</td>
 
 													</tr>
-													<tr class="player">
+													<tr class="rank2">
 														<th scope="row">2</th>
 														<td>Mena</td>
 														<td>8</td>
 
 													</tr>
-													<tr class="player">
+													<tr class="rank3">
 														<th scope="row">3</th>
 														<td>Canolo</td>
 														<td>7</td>
 
 													</tr>
-													<tr class="player">
+													<tr>
 														<th scope="row">4</th>
 														<td>Avi</td>
 														<td>6</td>
 
 													</tr>
-													<tr class="player">
+													<tr>
 														<th scope="row">5</th>
 														<td>Julio</td>
 														<td>5</td>
 
 													</tr>
-													<tr class="player">
+													<tr>
 														<th scope="row">6</th>
 														<td>Pulpo</td>
 														<td>4</td>
 
 													</tr>
-													<tr class="player">
+													<tr>
 														<th scope="row">7</th>
 														<td>JuanC</td>
 														<td>3</td>
 
 													</tr>
-													<tr class="player">
+													<tr>
 														<th scope="row">8</th>
 														<td>Kevin</td>
 														<td>2</td>
 
 													</tr>
-													<tr class="player">
+													<tr>
 														<th scope="row">4</th>
 														<td>Vampi</td>
 														<td>1</td>
@@ -354,84 +351,84 @@
 									</div>
 								</div>
 
-								<div class="collapse" id="collapseT2" data-bs-parent="#myGroup">
+								<div class="collapse" id="event2" data-bs-parent="#myGroup">
 									<h3>ENE 12</h3> <h2>MONOTYPES</h2>
 									<div class="card card-body">
 										<table class="table p-5">
 											<table class="table" style="text-align:center;">
 												<thead>
 													<tr class="standing-table">
-														<th scope="col">POS</th>
+														<th scope="col">RANK</th>
 														<th scope="col">TRAINER</th>
-														<th scope="col">PTS</th>
+														<th scope="col">SCORE</th>
 													</tr>
 												</thead>
 												<tbody>
 
-													<tr class="player">
+													<tr class="rank1">
 														<th scope="row">1</th>
 														<td>Patrón</td>
 														<td>12</td>
 
 													</tr>
-													<tr class="player">
+													<tr class="rank2">
 														<th scope="row">2</th>
 														<td>Mena</td>
 														<td>11</td>
 
 													</tr>
-													<tr class="player">
+													<tr class="rank3">
 														<th scope="row">3</th>
 														<td>Rick</td>
 														<td>10</td>
 
 													</tr>
-													<tr class="player">
+													<tr>
 														<th scope="row">4</th>
 														<td>Canolo</td>
 														<td>9</td>
 
 													</tr>
-													<tr class="player">
+													<tr>
 														<th scope="row">5</th>
 														<td>Avi</td>
 														<td>7</td>
 
 													</tr>
-													<tr class="player">
+													<tr>
 														<th scope="row">5</th>
 														<td>Kevin</td>
 														<td>7</td>
 
 													</tr>
-													<tr class="player">
+													<tr>
 														<th scope="row">6</th>
 														<td>Gus</td>
 														<td>6</td>
 
 													</tr>
-													<tr class="player">
+													<tr>
 														<th scope="row">6</th>
 														<td>Vampi</td>
 														<td>6</td>
 
 													</tr>
-													<tr class="player">
+													<tr>
 														<th scope="row">7</th>
 														<td>Julio</td>
 														<td>5</td>
 													</tr>
-													<tr class="player">
+													<tr>
 														<th scope="row">7</th>
 														<td>JuanC</td>
 														<td>5</td>
 													</tr>
-													<tr class="player">
+													<tr>
 														<th scope="row">8</th>
 														<td>Cruz</td>
 														<td>-2</td>
 													</tr>
-													<tr class="player">
+													<tr>
 														<th scope="row">8</th>
 														<td>AA</td>
 														<td>-2</td>
@@ -443,68 +440,8 @@
 									</div>
 								</div>
 
-								<div class="collapse" id="collapseT3" data-bs-parent="#myGroup">
+								<div class="collapse" id="event3" data-bs-parent="#myGroup">
 									<h3>FEB 10 </h3> <h2>TAG TEAM</h2>
-									<br><br>
-									<h3>T B D</h3>
-								</div>
-
-								<div class="collapse" id="collapseT4" data-bs-parent="#myGroup">
-									<h2>MAR <br> REGULATION</h2>
-									<br><br>
-									<h3>T B D</h3>
-								</div>
-
-								<div class="collapse" id="collapseT5" data-bs-parent="#myGroup">
-									<h2>ABR <br> T B D</h2>
-									<br><br>
-									<h3>T B D</h3>
-								</div>
-
-								<div class="collapse" id="collapseT6" data-bs-parent="#myGroup">
-									<h2>MAY <br>T B D</h2>
-									<br><br>
-									<h3>T B D</h3>
-								</div>
-
-								<div class="collapse" id="collapseT7" data-bs-parent="#myGroup">
-									<h2>JUN <br> REGULATION</h2>
-									<br><br>
-									<h3>T B D</h3>
-								</div>
-
-								<div class="collapse" id="collapseT8" data-bs-parent="#myGroup">
-									<h2>JUL <br> MONOTYPES 2</h2>
-									<br><br>
-									<h3>T B D</h3>
-								</div>
-
-								<div class="collapse" id="collapseT9" data-bs-parent="#myGroup">
-									<h2>AGOSTO <br> T B D</h2>
-									<br><br>
-									<h3>T B D</h3>
-								</div>
-
-								<div class="collapse" id="collapseT10" data-bs-parent="#myGroup">
-									<h2>SEPT <br> REGULATION</h2>
-									<br><br>
-									<h3>T B D</h3>
-								</div>
-
-								<div class="collapse" id="collapseT11" data-bs-parent="#myGroup">
-									<h2>OCT <br> T B D</h2>
-									<br><br>
-									<h3>T B D</h3>
-								</div>
-
-								<div class="collapse" id="collapseT12" data-bs-parent="#myGroup">
-									<h2>NOV <br> T B D</h2>
-									<br><br>
-									<h3>T B D</h3>
-								</div>
-
-								<div class="collapse" id="collapseT13" data-bs-parent="#myGroup">
-									<h2>DIC | 2024 <br> REGULATION</h2>
 									<br><br>
 									<h3>T B D</h3>
 								</div>
@@ -516,8 +453,8 @@
 		</div>
 	</section>
 
-	<section class="copyright mobile-h p-3">
-		<div class="row justify-content-md-center">
+	<section class="copyright p-3">
+		<div class="row justify-content-center">
 			<div class="col-lg-12">
 				<span class="highlight">
 					© 2024 PPV TOUR 2024
@@ -527,13 +464,10 @@
 	</section>
 
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-
 	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-
 	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 	<script src="/node_modules/jquery/dist/jquery.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 
 	<script>
@@ -545,53 +479,11 @@
 		});
 	</script>
 
-	<script>
-		if (history.scrollRestoration) {
-			history.scrollRestoration = 'manual';
-		} else {
-			window.onbeforeunload = function () {
-				window.scrollTo(0, 0);
-			}
-		}
-	</script>
-
-	<script>
-		$(document).ready(function(){
-			$('.owl-carousel').owlCarousel();
-		});
-	</script>
-
-	<script type="text/javascript">
-		$('.owl-one').owlCarousel({
-			loop:true,
-			autoplay:true,
-			slideTransition: 'linear',
-			autoplayTimeout: 4000,
-			autoplaySpeed: 4000,
-			autoplayHoverPause: false,
-			nav:false,
-			dots:false,
-			stagePadding: 0,
-			responsive:{
-				0:{
-					items:2,
-				},
-				600:{
-					items:2,
-				},
-				1000:{
-					items:5
-
-				}
-			}
-		})
-	</script>
-
 	<script src="https://unpkg.com/kursor"></script>
 	<script>
 		new kursor({
 			type: 1,
-			color: '#f2f2f2',
+			color: '#fff',
 			removeDefaultCursor: true
 		})
 	</script>

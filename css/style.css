@@ -1,5 +1,5 @@
 body{
-	color: #f2f2f2;
+	color: #fff;
 	background-color: #b01c1c;
 	font-family: 'Roboto', sans-serif;
 	scroll-behavior: smooth;
@@ -77,7 +77,7 @@ p{
 }
 
 .nav-item a:hover{
-	color: #f2f2f2!important;
+	color: #fff!important;
 	text-decoration: none;
 }
 
@@ -116,45 +116,41 @@ p{
 	text-align: center;
 }
 
-.about{
+.pkmn{
 	height: fit-content;
 	text-align: center;
 	padding-top: 5rem;
 	padding-bottom: 5rem;
 }
 
-.planes{
-	height: fit-content;
-	text-align: center;
-	padding-top: 20vh;
-	padding-bottom: 20vh;
-}
-
-.clientes{
-	height: 100vh;
-	text-align: center;
-}
-
 .standing-table{
-	background-color: rgba(255, 255, 255, .2);
+	background-color: rgba(255, 255, 255, .25);
 	font-weight: bolder;
 	font-size: x-large;
 }
 
 th{
-	color: #f2f2f2;
+	color: #fff;
 }
 
 td{
-	color: #f2f2f2;
+	color: #fff;
 	font-weight: bold;
 	text-transform: uppercase;
 }
 
-.player:hover{
-	background-color: #260e32;
-	transition: .5s;
+.rank1{
+	background-color: rgba(220, 164, 4, .7);
 }
+
+.rank2{
+	background-color: rgb(140,140,140, .7);
+}
+
+.rank3{
+	background-color: rgb(172,100,12, .7);
+}
+
 
 .footer{
 	font-size: small;
@@ -187,9 +183,9 @@ td{
 	font-weight: bold;
 	border: solid;
 	border-width: thin;
-	border-color: #f2f2f2;
+	border-color: #fff;
 	border-radius: 8px;
-	color: #f2f2f2;
+	color: #fff;
 	letter-spacing: 5px;
 	padding: 10px;
 	transition: .2s;
@@ -198,8 +194,8 @@ td{
 }
 
 .btn:hover{
-	background-color: rgba(255, 255, 255, .1);
-	color: #f2f2f2;
+	background-color: rgba(255, 255, 255, .25);
+	color: #fff;
 	border-color: #fff;
 	transform: translateY(-15%);
 }
@@ -286,6 +282,7 @@ td{
 	}
 }
 
+
 /* SCROLLBAR */
 
 ::-webkit-scrollbar {
@@ -297,7 +294,7 @@ td{
 }
 
 ::-webkit-scrollbar-thumb {
-	background: #f2f2f2;
+	background: #fff;
 	border-radius: 10px;
 }
 
