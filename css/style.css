@@ -86,6 +86,7 @@ p{
 	color: #fff;
 	text-decoration: none;
 	font-weight: bold;
+	letter-spacing: 4px;
 }
 
 .nav-item a:hover{
@@ -328,6 +329,10 @@ td{
 	margin: 15px;
 }
 
+.sponsors{
+	width: 200px;
+}
+
 .type{
 	width: 90px;
 }
@@ -435,6 +440,10 @@ td{
 
 	.type{
 		width: 75px;
+	}
+
+	.sponsors{
+		width: 80%;
 	}
 }
 
