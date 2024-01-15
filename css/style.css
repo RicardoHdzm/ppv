@@ -31,11 +31,14 @@ h1{
 h2{
 	font-size: 32px;
 	font-weight: bold;
+	padding-bottom: 15px;
 }
 
 h3{
-	padding: 0px!important;
+	font-size: 26px;
 	font-weight: bold;
+	padding-bottom: 15px;
+
 }
 
 p{
@@ -45,7 +48,7 @@ p{
 }
 
 ::selection {
-	color: #000;
+	color: #fff;
 	background: #ac1c1c;
 }
 
@@ -157,7 +160,7 @@ td{
 	height: 100vh;
 }
 
-.copyright{
+.copyright p{
 	text-align: center;
 	font-size: xx-small;
 }
