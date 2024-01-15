@@ -234,7 +234,7 @@ td{
 	}
 
 	.nav-logo{
-		width: 50px;
+		width: 65px;
 	}
 
 	.main-logo{
@@ -245,6 +245,7 @@ td{
 		background-image: url("../img/background/bgm.png");
 		background-attachment: scroll;
 		background-position: center;
+		padding-top: 0px;
 	}
 
 	h1{
@@ -266,7 +267,6 @@ td{
 	.nav-link.active {
 		font-size: small;!important;
 	}
-
 }
 
 /* SCROLLBAR */
