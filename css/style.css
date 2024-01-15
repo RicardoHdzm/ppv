@@ -217,7 +217,7 @@ td{
 	transition: .2s;
 	cursor: none!important;
 	width: 100%;
-	height: auto;
+	height: 100%;
 }
 
 .btn:hover{
@@ -332,28 +332,24 @@ td{
 }
 
 .glosary{
-	font-size: xx-small!important;
+	font-size: x-small;
 	letter-spacing: 0px;
 }
 
 
 .fa-circle-minus{
-	font-size: large;
 }
 
 .fa-circle-up{
 	color: #00ff51;
-	font-size: large;
 }
 
 .fa-circle-down{
 	color: #Ff6a00;
-	font-size: large;
 }
 
 .fa-circle-plus{
 	color: #00f1ff;
-	font-size: large;
 }
 
 /* CARDS */
@@ -426,6 +422,10 @@ td{
 
 	.nav-link.active {
 		font-size: small;!important;
+	}
+
+	.btn{
+		font-size: xx-small;
 	}
 }
 
