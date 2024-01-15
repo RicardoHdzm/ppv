@@ -15,6 +15,7 @@ body{
 	transition: .5s;
 }
 
+
 .dark-mode {
 	background-color: black;
 	background-image: url("../img/background/bg-d.png");
@@ -336,7 +337,6 @@ td{
 	letter-spacing: 0px;
 }
 
-
 .fa-circle-minus{
 }
 
@@ -350,6 +350,11 @@ td{
 
 .fa-circle-plus{
 	color: #00f1ff;
+}
+
+.imgx{
+	pointer-events: none;
+	user-select: none;
 }
 
 /* CARDS */
