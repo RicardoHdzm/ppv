@@ -226,15 +226,15 @@ td{
 @media only screen and (max-width: 1024px){
 
 	.navbar p{
-		font-size: medium;
+		font-size: small;
 	}
 
 	.navbar a{
-		font-size: medium;
+		font-size: small;
 	}
 
 	.nav-logo{
-		width: 75px;
+		width: 50px;
 	}
 
 	.main-logo{
@@ -264,7 +264,7 @@ td{
 	}
 
 	.nav-link.active {
-		font-size: medium;!important;
+		font-size: small;!important;
 	}
 
 }
