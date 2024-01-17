@@ -271,11 +271,11 @@ td{
 
 #darkBtn {
 	position: fixed;
-	bottom: 40px;
-	right: 40px;
+	bottom: 50px;
+	right: 50px;
 	z-index: 90;
 	outline: none; 
-	background-color: #ac1c1c; 
+	background-color: #c31c41; 
 	cursor: pointer;
 	font-weight: bolder;
 	border-color: #fff!important;
@@ -287,19 +287,41 @@ td{
 }
 
 #darkBtn:hover {
-	background-color: #080808;
-	transform: translateY(-10px);
+	background-color: #670e94;
+	transform: translateY(-5px);
+}
+
+#discordBtn {
+	position: fixed;
+	bottom: 150px;
+	right: 50px;
+	z-index: 90;
+	outline: none; 
+	background-color: #6064f4; 
+	cursor: pointer;
+	font-weight: bolder;
+	border-color: #fff!important;
+	border: solid;
+	border-width: 5px;
+	transition: 0.5s ease;
+	border-radius: 100%;
+	padding: 10px!important;
+}
+
+#discordBtn:hover {
+	background-color: #4346ab;
+	transform: translateY(-5px);
 }
 
 
 /* DARK MODE */
 
 .dark-mode #darkBtn {
-	background-color: #080808; /* Set a background color */
+	background-color: #670e94; /* Set a background color */
 }
 
 .dark-mode #darkBtn:hover {
-	background-color: #ac1c1c;
+	background-color: #c31c41;
 }
 
 .dark-mode .navbar{
