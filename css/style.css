@@ -126,7 +126,7 @@ p{
 /* SECTIONS */
 
 .home{
-	height: 100vh;
+	height: fit-content;
 	text-align: center;
 }
 
@@ -491,5 +491,5 @@ td{
 }
 
 ::-webkit-scrollbar-thumb:hover {
-	background: whitesmoke;
+	background: #e6e6e6;
 }
