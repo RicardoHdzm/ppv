@@ -423,11 +423,12 @@ td{
 	}
 
 	.main-logo{
-		width: 100%;
+		width: 80%;
 	}
 
 	.home{
-		height: 100vh;
+		padding-top:5rem;
+		padding-bottom:5rem;
 	}
 
 	body{
