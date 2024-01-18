@@ -134,7 +134,7 @@ p{
 	height: fit-content;
 	text-align: center;
 	padding-top: 5rem;
-	padding-bottom: 5rem;
+	padding-bottom: 2.5rem;
 }
 
 .standing-table{
@@ -192,7 +192,7 @@ td{
 }
 
 .main-logo{
-	width: 50%;
+	width: 45%;
 }
 
 .footer-logo{
@@ -313,15 +313,14 @@ td{
 	transform: translateY(-5px);
 }
 
-
 /* DARK MODE */
 
 .dark-mode #darkBtn {
-	background-color: #670e94; /* Set a background color */
+	background-color: #080808; /* Set a background color */
 }
 
 .dark-mode #darkBtn:hover {
-	background-color: #c31c41;
+	background-color: #000;
 }
 
 .dark-mode .navbar{
@@ -420,7 +419,7 @@ td{
 	}
 
 	.nav-logo{
-		width: 120px;
+		width: 90px;
 	}
 
 	.main-logo{
