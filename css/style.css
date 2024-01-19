@@ -9,9 +9,9 @@ body{
 	height: 100%;
 	scroll-behavior: smooth;
 	overflow-x: hidden;
+	padding-top: 50px;
 	letter-spacing: 8px;
 	text-transform: uppercase;
-	padding-top: 25px;
 	transition: .5s;
 }
 
@@ -105,7 +105,7 @@ p{
 }
 
 .nav-logo{
-	width: 175px;
+	width: 150px;
 }
 
 .custom-toggler .navbar-toggler-icon {
@@ -125,16 +125,17 @@ p{
 
 /* SECTIONS */
 
-.home{
+.pkmn-home{
 	height: 100vh;
 	text-align: center;
 }
+
 
 .pkmn{
 	height: fit-content;
 	text-align: center;
 	padding-top: 5rem;
-	padding-bottom: 2.5rem;
+	padding-bottom: 5rem;
 }
 
 .standing-table{
@@ -191,9 +192,6 @@ td{
 	font-size: xx-small;
 }
 
-.main-logo{
-	width: 45%;
-}
 
 .footer-logo{
 	width: 80px;
@@ -346,6 +344,10 @@ td{
 
 /* IMG */
 
+.main-logo{
+	height: 60vh;
+}
+
 .icon{
 	width: 45px;
 	margin: 15px;
@@ -423,10 +425,10 @@ td{
 	}
 
 	.main-logo{
-		width: 100%;
+		width: 80vw;
 	}
 
-	.home{
+	.cls-4{
 		padding-top:7.5rem;
 		padding-bottom:5rem;
 	}
@@ -460,6 +462,15 @@ td{
 
 	tr{
 		font-size: small;
+	}
+
+	.pkmn-home{
+		height: 100vh;
+	}
+
+
+	.main-logo{
+		height: 50%;
 	}
 
 	.nav-link.active {
