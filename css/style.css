@@ -144,7 +144,7 @@ p{
 }
 
 .next{
-	background-color: rgba(255, 255, 255, .3);
+	background-color: rgba(37, 149, 190, .3);
 }
 
 th{
@@ -186,8 +186,11 @@ td{
 	height: 100vh;
 }
 
-.copyright p{
+.copyright{
 	text-align: center;
+}
+
+.copyright p{
 	font-size: xx-small;
 }
 
@@ -224,7 +227,7 @@ td{
 	background-color: rgba(255, 255, 255, .25);
 	color: #fff;
 	border-color: #fff;
-	transform: translateY(-15%);
+	transform: translateY(-5%);
 }
 
 .btn:focus, .btn:active{
@@ -254,7 +257,7 @@ td{
 	background-color: rgba(255, 255, 255, .25);
 	color: #fff;
 	border-color: #fff;
-	transform: translateY(-15%);
+	transform: translateY(-5%);
 }
 
 .btn2:focus, .btn2:active{
