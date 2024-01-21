@@ -361,7 +361,7 @@ td{
 }
 
 .sponsors:hover{
-	transform: translateY(-5px);
+	transform: scale(1.05);
 }
 
 .sponsors2{
@@ -370,7 +370,7 @@ td{
 }
 
 .sponsors2:hover{
-	transform: translateY(-5px);
+	transform: scale(1.05);
 }
 
 .type{
