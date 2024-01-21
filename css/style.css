@@ -356,11 +356,20 @@ td{
 }
 
 .sponsors{
-	width: 200px;
+	width: 60%;
 	transition: .5s;
 }
 
 .sponsors:hover{
+	transform: translateY(-5px);
+}
+
+.sponsors2{
+	width: 70%;
+	transition: .5s;
+}
+
+.sponsors2:hover{
 	transform: translateY(-5px);
 }
 
@@ -488,6 +497,10 @@ td{
 	}
 
 	.sponsors{
+		width: 80%;
+	}
+
+	.sponsors2{
 		width: 80%;
 	}
 }
