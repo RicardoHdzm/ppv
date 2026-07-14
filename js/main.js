@@ -26,6 +26,95 @@ function spriteUrl(mon) {
   return `https://play.pokemonshowdown.com/sprites/home/${showdownSlug(mon.name)}.png`;
 }
 
+// Si el sprite con guion no existe, se reintenta sin separadores.
+// El CDN de Showdown usa guion solo para formas regionales/alternas
+// (ponyta-galar, rotom-wash), pero lo omite en especies cuyo nombre
+// oficial tiene dos palabras (Iron Hands -> ironhands, Ting-Lu -> tinglu).
+function spriteFallback(img) {
+  const name = img.dataset.monName || img.alt;
+  if (!img.dataset.triedSquash) {
+    img.dataset.triedSquash = "1";
+    const squashed = name
+      .toLowerCase()
+      .normalize("NFD")
+      .replace(/[^a-z0-9]/g, "");
+    img.src = `https://play.pokemonshowdown.com/sprites/home/${squashed}.png`;
+    return;
+  }
+  img.parentElement.innerHTML = `<span style="font-family:var(--font-mono);font-size:9px;color:var(--text-faint);text-align:center;padding:2px">${name}</span>`;
+}
+
+// Tipos de cada Pokémon: se obtienen automáticamente desde PokeAPI a partir
+// del nombre (igual que el sprite), salvo que se indique "types" a mano
+// en data.js, por ejemplo: { name: "Ponyta-Galar", types: ["psychic"] }.
+const TYPE_ES = {
+  normal: "Normal", fire: "Fuego", water: "Agua", electric: "Eléctrico",
+  grass: "Planta", ice: "Hielo", fighting: "Lucha", poison: "Veneno",
+  ground: "Tierra", flying: "Volador", psychic: "Psíquico", bug: "Bicho",
+  rock: "Roca", ghost: "Fantasma", dragon: "Dragón", dark: "Siniestro",
+  steel: "Acero", fairy: "Hada",
+};
+
+const TYPE_COLORS = {
+  normal: "#A8A878", fire: "#F08030", water: "#6890F0", electric: "#F8D030",
+  grass: "#78C850", ice: "#98D8D8", fighting: "#C03028", poison: "#A040A0",
+  ground: "#E0C068", flying: "#A890F0", psychic: "#F85888", bug: "#A8B820",
+  rock: "#B8A038", ghost: "#705898", dragon: "#7038F8", dark: "#705848",
+  steel: "#B8B8D0", fairy: "#EE99AC",
+};
+
+const typeCache = new Map();
+
+function sortedTypes(pokeJson) {
+  return pokeJson.types.sort((a, b) => a.slot - b.slot).map((t) => t.type.name);
+}
+
+async function fetchPokemonTypes(mon) {
+  if (mon.types) return mon.types;
+  const slug = showdownSlug(mon.name);
+  if (typeCache.has(slug)) return typeCache.get(slug);
+  const promise = (async () => {
+    try {
+      const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${slug}`);
+      if (res.ok) return sortedTypes(await res.json());
+
+      // Algunas especies (ej. Maushold, Oinkologne) no tienen una entrada
+      // de Pokémon con ese nombre exacto: se busca la variedad por
+      // defecto a partir de la especie.
+      const speciesRes = await fetch(`https://pokeapi.co/api/v2/pokemon-species/${slug}`);
+      if (!speciesRes.ok) throw new Error("Pokémon no encontrado en PokeAPI");
+      const species = await speciesRes.json();
+      const defaultVariety = species.varieties.find((v) => v.is_default) || species.varieties[0];
+      const pokeRes = await fetch(defaultVariety.pokemon.url);
+      if (!pokeRes.ok) throw new Error("Variedad no encontrada en PokeAPI");
+      return sortedTypes(await pokeRes.json());
+    } catch (err) {
+      return null;
+    }
+  })();
+  typeCache.set(slug, promise);
+  return promise;
+}
+
+function typeBadgeHtml(type) {
+  const color = TYPE_COLORS[type] || "#888";
+  const label = TYPE_ES[type] || type;
+  return `<span class="type-badge" style="background:${color}">${label}</span>`;
+}
+
+function loadTeamTypes(tournament) {
+  const nodes = document.querySelectorAll("[data-mon-types]");
+  const mons = tournament.participants.flatMap((p) => p.team);
+  nodes.forEach((node, i) => {
+    const mon = mons[i];
+    if (!mon) return;
+    fetchPokemonTypes(mon).then((types) => {
+      if (!types) return;
+      node.innerHTML = types.map(typeBadgeHtml).join("");
+    });
+  });
+}
+
 function statusLabel(status) {
   return { live: "En curso", upcoming: "Próximo", finished: "Finalizado" }[status] || status;
 }
@@ -134,10 +223,11 @@ function renderTrainerCard(p) {
           (mon) => `
       <div class="mon">
         <div class="mon-sprite">
-          <img src="${spriteUrl(mon)}" alt="${mon.name}" loading="lazy"
-               onerror="this.parentElement.innerHTML='<span style=\\'font-family:var(--font-mono);font-size:9px;color:var(--text-faint);text-align:center;padding:2px\\'>${mon.name}</span>'">
+          <img src="${spriteUrl(mon)}" alt="${mon.name}" data-mon-name="${mon.name}" loading="lazy"
+               onerror="spriteFallback(this)">
         </div>
         <div class="mon-name">${mon.name}</div>
+        <div class="mon-types" data-mon-types></div>
       </div>`
         )
         .join("")
@@ -359,6 +449,8 @@ function renderTournamentPage() {
       }
     </section>
   `;
+
+  loadTeamTypes(tournament);
 }
 
 /* ---------- Init ---------- */
