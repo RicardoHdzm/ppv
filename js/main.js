@@ -262,9 +262,42 @@ function renderTournamentPage() {
 
 /* ---------- Init ---------- */
 
+/* ---------- Video de fondo del hero: forzar reproducción y diagnosticar ---------- */
+
+function initHeroVideo() {
+  const video = document.getElementById("heroVideo");
+  if (!video) return;
+
+  video.muted = true; // por si el navegador ignora el atributo HTML
+
+  video.addEventListener("error", () => {
+    console.warn(
+      "[Rick Cup] El video del hero no cargó. Verifica que el archivo exista " +
+      "exactamente en assets/videos/pkmn.mp4 (mismo nombre y mayúsculas/minúsculas) " +
+      "y que sea un .mp4 con códec H.264."
+    );
+  });
+
+  const tryPlay = () => {
+    const playPromise = video.play();
+    if (playPromise !== undefined) {
+      playPromise.catch((err) => {
+        console.warn("[Rick Cup] El navegador bloqueó la reproducción automática:", err);
+      });
+    }
+  };
+
+  if (video.readyState >= 2) {
+    tryPlay();
+  } else {
+    video.addEventListener("loadeddata", tryPlay, { once: true });
+  }
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   buildTournamentsDropdown();
   initMobileNav();
   renderActiveTicker();
   renderTournamentPage();
+  initHeroVideo();
 });

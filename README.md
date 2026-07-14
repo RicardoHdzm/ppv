@@ -16,6 +16,8 @@ rick-cup/
 ├── assets/
 │   ├── brand/
 │   │   └── logo.png      Tu logo, usado en el navbar, el hero y el pie de página
+│   ├── videos/
+│   │   └── pkmn.mp4      Video de fondo del hero (ya incluido)
 │   └── sprites/          Carpeta para tus propias imágenes de Pokémon (opcional)
 ```
 
@@ -99,48 +101,37 @@ un nuevo elemento del arreglo `TOURNAMENTS`, y cambia `slug`, `year`,
 `regulation`, `name`, `participants` y `matches`. Aparecerá automáticamente
 en el menú "Torneos", agrupado bajo su año.
 
-## Cómo agregar el video de fondo del hero
+## Cómo funciona el video de fondo del hero
 
-El hero (`index.html`) está preparado para llevar un video de fondo oscurecido
-automáticamente para que el texto siga siendo legible. Por defecto está
-comentado, así que se ve en negro sólido.
+El hero (`index.html`) reproduce un video local de fondo, oscurecido con
+una capa CSS (`.hero-overlay`) para que el texto siga siendo legible, en
+automático, sin sonido y en loop.
 
-1. Coloca tu archivo de video (idealmente `.mp4`, comprimido, sin audio
-   necesario ya que se reproduce muteado) dentro de `assets/`, por ejemplo
-   `assets/hero-video.mp4`.
-2. En `index.html`, dentro de la sección `<section class="hero" id="hero">`,
-   descomenta el bloque `<video class="hero-video" ...>` y ajusta la ruta si
-   usaste otro nombre de archivo.
-3. Opcionalmente agrega una imagen `assets/hero-poster.jpg` (se muestra
-   mientras el video carga).
-
-El oscurecido se aplica solo mediante CSS (capa `.hero-overlay`), así que no
-necesitas editar el video para bajarle el brillo.
-
-## Cómo agregar el video de fondo del hero
-
-El hero (`index.html`) usa un video de YouTube como fondo (autoplay, sin
-sonido y en loop), sin necesidad de descargar ningún archivo: se inserta
-como un iframe de YouTube sin controles, ampliado con CSS para cubrir toda
-la sección (ver `.hero-yt-frame` en `css/styles.css`). El oscurecido se
-aplica aparte, con la capa `.hero-overlay`, así que no depende del video.
-
-Para cambiar el video, edita en `index.html` la línea del `<iframe>` dentro
-de `.hero-yt-frame` y reemplaza el ID en dos lugares (después de `/embed/`
-y en `playlist=`):
+El archivo ya está incluido en:
 
 ```
-https://www.youtube-nocookie.com/embed/TU_ID_AQUI?autoplay=1&mute=1&loop=1&playlist=TU_ID_AQUI&controls=0...
+assets/videos/pkmn.mp4
 ```
 
-El ID es la parte final de la URL del video, por ejemplo en
-`youtube.com/watch?v=H_CUX8yCNr8` el ID es `H_CUX8yCNr8`.
+A partir del video que compartiste (720p, 3 minutos, ~200 MB) generé esta
+versión para el sitio: **recorté los primeros 20 segundos** para usarlos
+como loop corto, le quité el audio (no se necesita, se reproduce muteado)
+y lo comprimí a H.264 — quedó en ~4.5 MB, apto para cargar rápido en la web.
 
-Si en algún momento prefieres un archivo de video propio en vez de YouTube
-(por ejemplo para que cargue más rápido), también dejé listo el CSS para
-un `<video>` local: agrega tu archivo en `assets/`, reemplaza el bloque
-`.hero-yt-frame` en `index.html` por `<video class="hero-video" autoplay
-muted loop playsinline src="assets/tu-video.mp4"></video>`.
+Si prefieres otro fragmento del video, uno más largo, o el video completo
+comprimido (pesaría bastante más, del orden de 30-40 MB), dime qué
+segundo de inicio y fin quieres y te genero esa versión.
+
+Si en algún momento quieres reemplazarlo tú mismo por otro archivo, solo
+sobrescribe `assets/videos/pkmn.mp4` con el mismo nombre, o cambia la ruta
+en la línea `<source src="assets/videos/pkmn.mp4" ...>` dentro de la
+sección `<section class="hero" id="hero">` en `index.html`.
+
+Recomendaciones si subes tu propio archivo más adelante:
+- Formato `.mp4` (códec H.264), para máxima compatibilidad entre navegadores.
+- Comprimido/ligero — un hero de fondo no necesita más de unos pocos MB;
+  archivos muy pesados hacen que la página cargue lento.
+- El audio no es necesario, ya que el video se reproduce muteado.
 
 ## Cómo verlo localmente
 

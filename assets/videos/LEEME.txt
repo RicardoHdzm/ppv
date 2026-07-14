@@ -1,0 +1,6 @@
+Coloca aquí tu archivo de video con el nombre exacto:
+
+    pkmn.mp4
+
+El hero de index.html ya está configurado para reproducirlo automáticamente
+(sin sonido, en loop). No necesitas tocar el HTML si usas ese mismo nombre.
