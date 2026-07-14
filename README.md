@@ -71,6 +71,35 @@ su nombre (no necesitas hacer nada). Si quieres usar tus propias imágenes:
 { name: "Incineroar", sprite: "assets/sprites/incineroar.png" }
 ```
 
+### Reglas del torneo y formulario de equipos (Open Team Sheets)
+
+Cada torneo ahora muestra automáticamente una sección "Reglas del torneo"
+(sistema suizo, Bo3, Open Team Sheets, transmisión por Discord/YouTube) y,
+si agregas un link, un botón para que los participantes suban la captura
+de su equipo antes de su primera partida.
+
+Ese link va en `js/data.js`, dentro del torneo correspondiente:
+
+```js
+teamSheetFormUrl: "https://forms.gle/TU-FORMULARIO-AQUI",
+```
+
+Reemplázalo por el link real de tu Google Forms. Si lo dejas vacío (`""`)
+o lo quitas, el botón simplemente no aparece.
+
+Justo debajo del botón se muestra un **contador en vivo** con el tiempo
+que falta para el cierre de inscripciones, tomado de este otro campo del
+mismo torneo:
+
+```js
+registrationDeadline: "2026-07-24T23:59:59",
+```
+
+Cuando se cumple esa fecha y hora, el contador cambia automáticamente a
+"Inscripciones cerradas" y el botón para subir la captura del equipo
+desaparece — no hace falta que quites nada a mano. Para cambiar la fecha
+límite, solo edita ese valor (formato `AAAA-MM-DDTHH:MM:SS`).
+
 ### Agregar un enfrentamiento
 
 Dentro del torneo, en `matches`:

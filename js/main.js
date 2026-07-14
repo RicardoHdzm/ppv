@@ -23,7 +23,7 @@ function showdownSlug(name) {
 
 function spriteUrl(mon) {
   if (mon.sprite) return mon.sprite;
-  return `https://play.pokemonshowdown.com/sprites/gen5/${showdownSlug(mon.name)}.png`;
+  return `https://play.pokemonshowdown.com/sprites/home/${showdownSlug(mon.name)}.png`;
 }
 
 function statusLabel(status) {
@@ -70,10 +70,37 @@ function initMobileNav() {
     links.classList.toggle("mobile-open");
   });
 
+  const closeAllDropdowns = () => {
+    document.querySelectorAll(".dropdown.open").forEach((d) => d.classList.remove("open"));
+  };
+
   document.querySelectorAll(".dropdown > button").forEach((btn) => {
     btn.addEventListener("click", (e) => {
       e.preventDefault();
-      btn.closest(".dropdown").classList.toggle("open");
+      e.stopPropagation();
+      const dropdown = btn.closest(".dropdown");
+      const wasOpen = dropdown.classList.contains("open");
+      closeAllDropdowns();
+      if (!wasOpen) dropdown.classList.add("open");
+    });
+  });
+
+  // Cierra el desglose si se hace clic en cualquier otro lugar de la página.
+  document.addEventListener("click", (e) => {
+    document.querySelectorAll(".dropdown.open").forEach((d) => {
+      if (!d.contains(e.target)) d.classList.remove("open");
+    });
+  });
+
+  // Cierra el desglose con la tecla Escape.
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeAllDropdowns();
+  });
+
+  // Cierra el desglose apenas se elige un torneo de la lista.
+  document.querySelectorAll(".dropdown-panel").forEach((panel) => {
+    panel.addEventListener("click", (e) => {
+      if (e.target.closest("a")) closeAllDropdowns();
     });
   });
 }
@@ -170,6 +197,67 @@ function renderMatchCard(match, participantsById) {
     </div>`;
 }
 
+function renderRegistrationBlock(tournament) {
+  if (!tournament.teamSheetFormUrl) return "";
+
+  const deadline = tournament.registrationDeadline ? new Date(tournament.registrationDeadline) : null;
+  const hasValidDeadline = deadline && !isNaN(deadline.getTime());
+  const isClosed = hasValidDeadline && Date.now() >= deadline.getTime();
+
+  const countdownHtml = hasValidDeadline
+    ? `
+      <div class="countdown-panel" data-registration-countdown data-deadline="${tournament.registrationDeadline}">
+        <div class="countdown-label" data-countdown-label>Cierre de inscripciones</div>
+        <div class="countdown-timer" data-countdown-timer>
+          <div class="countdown-unit"><span class="value" data-cd="d">00</span><span class="unit">días</span></div>
+          <div class="countdown-unit"><span class="value" data-cd="h">00</span><span class="unit">hrs</span></div>
+          <div class="countdown-unit"><span class="value" data-cd="m">00</span><span class="unit">min</span></div>
+          <div class="countdown-unit"><span class="value" data-cd="s">00</span><span class="unit">seg</span></div>
+        </div>
+      </div>`
+    : "";
+
+  const buttonHtml =
+    !hasValidDeadline || !isClosed
+      ? `<a class="btn btn-primary" style="margin-top:18px" data-registration-button href="${tournament.teamSheetFormUrl}" target="_blank" rel="noopener noreferrer">Subir captura de mi equipo</a>`
+      : "";
+
+  return countdownHtml + buttonHtml;
+}
+
+function startRegistrationCountdown() {
+  const panel = document.querySelector("[data-registration-countdown]");
+  if (!panel) return;
+
+  const deadline = new Date(panel.dataset.deadline).getTime();
+  const label = panel.querySelector("[data-countdown-label]");
+  const timer = panel.querySelector("[data-countdown-timer]");
+  const button = document.querySelector("[data-registration-button]");
+  const pad = (n) => String(n).padStart(2, "0");
+
+  const tick = () => {
+    const diff = deadline - Date.now();
+    if (diff <= 0) {
+      clearInterval(intervalId);
+      if (label) label.textContent = "Inscripciones cerradas";
+      if (timer) timer.style.display = "none";
+      if (button) button.remove();
+      return;
+    }
+    const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const h = Math.floor((diff / (1000 * 60 * 60)) % 24);
+    const m = Math.floor((diff / (1000 * 60)) % 60);
+    const s = Math.floor((diff / 1000) % 60);
+    panel.querySelector('[data-cd="d"]').textContent = pad(d);
+    panel.querySelector('[data-cd="h"]').textContent = pad(h);
+    panel.querySelector('[data-cd="m"]').textContent = pad(m);
+    panel.querySelector('[data-cd="s"]').textContent = pad(s);
+  };
+
+  tick();
+  const intervalId = setInterval(tick, 1000);
+}
+
 function renderTournamentPage() {
   const root = document.querySelector("[data-tournament-root]");
   if (!root) return;
@@ -182,7 +270,7 @@ function renderTournamentPage() {
     return;
   }
 
-  document.title = `${tournament.name} · Richampions Cup`;
+  document.title = `${tournament.name} · RICHAMPIONS PKMN CUP`;
 
   const participantsById = {};
   tournament.participants.forEach((p) => (participantsById[p.id] = p));
@@ -209,7 +297,7 @@ function renderTournamentPage() {
   root.innerHTML = `
     <header class="t-header">
       <div class="container">
-        <span class="eyebrow">Richampions Cup &middot; ${tournament.year}</span>
+        <span class="eyebrow">RICHAMPIONS PKMN CUP &middot; ${tournament.year}</span>
         <h1>${tournament.regulation}</h1>
         <div class="t-meta">
           <div class="t-meta-item">
@@ -234,6 +322,19 @@ function renderTournamentPage() {
 
     <section class="container">
       <p style="max-width:64ch;color:var(--text-muted);margin-top:28px">${tournament.description}</p>
+
+      <div class="section-heading">
+        <h2>Reglas del torneo</h2>
+      </div>
+      <div class="rules-panel">
+        <ul class="rules-list">
+          <li>Sistema <strong>suizo</strong>: los emparejamientos de cada ronda se arman según el desempeño hasta ese momento, sin eliminación directa.</li>
+          <li>Cada enfrentamiento se juega a <strong>mejor de 3 (Bo3)</strong>.</li>
+          <li>El torneo se juega bajo modalidad <strong>Open Team Sheets</strong>: antes de cada ronda, los equipos de ambos entrenadores se comparten públicamente.</li>
+          <li>Todas las partidas se transmiten en vivo por <strong>Discord</strong>, y las repeticiones quedan después en <strong>YouTube</strong>.</li>
+        </ul>
+        ${renderRegistrationBlock(tournament)}
+      </div>
 
       <div class="section-heading">
         <h2>Participantes</h2>
@@ -299,5 +400,6 @@ document.addEventListener("DOMContentLoaded", () => {
   initMobileNav();
   renderActiveTicker();
   renderTournamentPage();
+  startRegistrationCountdown();
   initHeroVideo();
 });

@@ -10,11 +10,13 @@
      slug: "identificador-unico-para-la-url",   // usado en torneo.html?t=slug
      year: 2026,
      regulation: "VGC 2026 Reg M-B",             // nombre corto de la regulación
-     name: "Richampions Cup — VGC 2026 Reg M-B",        // título completo de la página
+     name: "RICHAMPIONS PKMN CUP — VGC 2026 Reg M-B",        // título completo de la página
      status: "live",                             // "live" | "upcoming" | "finished"
      format: "Best of 3 (Bo3)",
      dateRange: "Julio 2026",
      description: "Texto que describe el torneo...",
+     teamSheetFormUrl: "https://forms.gle/TU-FORMULARIO-AQUI", // Google Forms donde suben la captura de su equipo (Open Team Sheets)
+     registrationDeadline: "2026-07-24T23:59:59", // fecha y hora límite de inscripción; después de esto se oculta el botón de subir captura
 
      participants: [
        {
@@ -56,20 +58,29 @@ const TOURNAMENTS = [
     slug: "vgc2026-reg-mb",
     year: 2026,
     regulation: "VGC 2026 Reg M-B",
-    name: "Richampions Cup — VGC 2026 Reg M-B",
+    name: "RICHAMPIONS PKMN CUP — VGC 2026 Reg M-B",
     status: "upcoming",
     format: "Suizo · Bo3",
     dateRange: "Julio 2026",
     description:
-      "Primera edición de Richampions Cup bajo la regulación VGC 2026 Reg M-B, jugada a sistema suizo. Inscripciones abiertas: por ahora hay 16 participantes registrados y aún no se ha jugado ningún enfrentamiento.",
+      "Primera edición de RICHAMPIONS PKMN CUP bajo la regulación VGC 2026 Reg M-B, jugada a sistema suizo. Inscripciones abiertas: por ahora hay 12 participantes registrados y aún no se ha jugado ningún enfrentamiento.",
+    teamSheetFormUrl: "https://forms.gle/TU-FORMULARIO-AQUI",
+    registrationDeadline: "2026-07-24T23:59:59",
 
     participants: [
       {
-        id: "participante-1",
-        name: "Participante 1",
+        id: "rick",
+        name: "Rick",
         wins: 0,
         losses: 0,
-        team: [],
+        team: [
+          { name: "Blastoise" },
+          { name: "Feraligatr"},
+          { name: "Sceptile" },
+          { name: "Empoleon" },
+          { name: "Emboar" },
+          { name: "Chesnaught" },
+        ],
       },
       {
         id: "participante-2",
@@ -144,34 +155,6 @@ const TOURNAMENTS = [
       {
         id: "participante-12",
         name: "Participante 12",
-        wins: 0,
-        losses: 0,
-        team: [],
-      },
-      {
-        id: "participante-13",
-        name: "Participante 13",
-        wins: 0,
-        losses: 0,
-        team: [],
-      },
-      {
-        id: "participante-14",
-        name: "Participante 14",
-        wins: 0,
-        losses: 0,
-        team: [],
-      },
-      {
-        id: "participante-15",
-        name: "Participante 15",
-        wins: 0,
-        losses: 0,
-        team: [],
-      },
-      {
-        id: "participante-16",
-        name: "Participante 16",
         wins: 0,
         losses: 0,
         team: [],
