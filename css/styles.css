@@ -676,10 +676,12 @@ h1, h2, h3, h4{
 }
 .mon-types{
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   gap: 2px;
-  min-height: 12px;
+  /* Reserva el alto de 2 filas de tipo aunque el Pokémon tenga uno solo,
+     para que todas las tarjetas del equipo queden alineadas parejo. */
+  min-height: 24px;
 }
 .type-badge{
   font-family: var(--font-mono);
@@ -688,10 +690,41 @@ h1, h2, h3, h4{
   letter-spacing: .02em;
   text-transform: uppercase;
   color: #fff;
-  padding: 1px 4px;
+  width: 46px;
+  padding: 2px 0;
   border-radius: 3px;
   text-shadow: 0 1px 1px rgba(0,0,0,.35);
+  text-align: center;
   white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1;
+}
+.mon-item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  margin-top: 6px;
+  max-width: 100%;
+}
+.mon-item-icon{
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  image-rendering: pixelated;
+}
+.mon-item span{
+  font-family: var(--font-mono);
+  font-size: 9.5px;
+  font-style: italic;
+  color: var(--text-faint);
+  text-align: center;
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
 }
 .team-empty{
   font-family: var(--font-mono);

@@ -44,6 +44,31 @@ function spriteFallback(img) {
   img.parentElement.innerHTML = `<span style="font-family:var(--font-mono);font-size:9px;color:var(--text-faint);text-align:center;padding:2px">${name}</span>`;
 }
 
+// Convierte el nombre de un objeto al slug que usa el CDN de íconos
+// de Showdown (ej. "King's Rock" -> "kings-rock").
+function itemSlug(name) {
+  return name
+    .toLowerCase()
+    .replace(/['’]/g, "")
+    .replace(/\s+/g, "-");
+}
+
+function itemIconUrl(item) {
+  return `https://play.pokemonshowdown.com/sprites/itemicons/${itemSlug(item)}.png`;
+}
+
+// Si el ícono no existe en Showdown, se reintenta con el repositorio
+// de sprites de PokeAPI antes de ocultar la imagen.
+function itemIconFallback(img) {
+  const name = img.dataset.itemName || img.alt;
+  if (!img.dataset.triedAlt) {
+    img.dataset.triedAlt = "1";
+    img.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/${itemSlug(name)}.png`;
+    return;
+  }
+  img.style.display = "none";
+}
+
 // Tipos de cada Pokémon: se obtienen automáticamente desde PokeAPI a partir
 // del nombre (igual que el sprite), salvo que se indique "types" a mano
 // en data.js, por ejemplo: { name: "Ponyta-Galar", types: ["psychic"] }.
@@ -228,6 +253,14 @@ function renderTrainerCard(p) {
         </div>
         <div class="mon-name">${mon.name}</div>
         <div class="mon-types" data-mon-types></div>
+        ${
+          mon.item
+            ? `<div class="mon-item">
+                 <img class="mon-item-icon" src="${itemIconUrl(mon.item)}" alt="${mon.item}" data-item-name="${mon.item}" loading="lazy" onerror="itemIconFallback(this)">
+                 <span>${mon.item}</span>
+               </div>`
+            : ""
+        }
       </div>`
         )
         .join("")
