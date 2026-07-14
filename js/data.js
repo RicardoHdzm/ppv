@@ -64,7 +64,7 @@ const TOURNAMENTS = [
     dateRange: "Julio 2026",
     description:
       "Primera edición de RICHAMPIONS PKMN CUP bajo la regulación VGC 2026 Reg M-B, jugada a sistema suizo. Inscripciones abiertas: por ahora hay 12 participantes registrados y aún no se ha jugado ningún enfrentamiento.",
-    teamSheetFormUrl: "https://forms.gle/TU-FORMULARIO-AQUI",
+    teamSheetFormUrl: "https://forms.gle/ArRumYHBD6ZfJNvo7",
     registrationDeadline: "2026-07-24T23:59:59",
 
     participants: [
